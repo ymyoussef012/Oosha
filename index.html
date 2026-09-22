@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>يوسف 💗 إيسو</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- القلوب المتحركة -->
+  <div id="hearts"></div>
+
+  <!-- البداية -->
+  <section id="welcome" class="page active">
+    <div class="card">
+      <h1>جاهزة 😉</h1>
+      <p>كل اللي بينا هنا 💗😍</p>
+
+      <h2>يوسف 💗 إيسو</h2>
+
+      <input type="password" id="password" placeholder="كلمة السر">
+      <button onclick="checkPassword()">دخول 💗</button>
+
+      <p id="wrong"></p>
+    </div>
+  </section>
+
+  <!-- الرسالة الأولى -->
+  <section id="message" class="page">
+    <div class="card">
+      <h1>ينن عيني 💗</h1>
+
+      <h2>بحبك يا كل حاجة حلوة في حياتي</h2>
+
+      <p>
+        وكلمة بحبك دي قليلة عليكي والله
+      </p>
+
+      <p>
+        تعالي بقى أوريكي أنا عملتلك إيه 🥹❤️
+      </p>
+
+      <button onclick="nextPage('start')">♥️ Next ♥️</button>
+    </div>
+  </section>
+
+  <!-- الصورة -->
+  <section id="start" class="page">
+    <div class="card">
+      <img class="main-photo"
+        src="images/IMG_20260922_235247_119.jpg">
+
+      <h1>بحبك ❤️</h1>
+
+      <button onclick="nextPage('beginning')">
+        ♥️ كملي ♥️
+      </button>
+    </div>
+  </section>
+
+  <!-- البداية -->
+  <section id="beginning" class="page">
+    <div class="card">
+      <h1>بدايتنا سوا من</h1>
+
+      <h2 class="date">💖23-11-2024💖</h2>
+
+      <div class="counter">
+        <div>
+          <span id="days">0</span>
+          <small>يوم</small>
+        </div>
+
+        <div>
+          <span id="hours">0</span>
+          <small>ساعة</small>
+        </div>
+
+        <div>
+          <span id="minutes">0</span>
+          <small>دقيقة</small>
+        </div>
+
+        <div>
+          <span id="seconds">0</span>
+          <small>ثانية</small>
+        </div>
+      </div>
+
+      <h2>كل ثانية بتعدي عليا وانتي في قلبي 💗</h2>
+
+      <p class="big-text">
+        في اليوم ده قولتلك بحبك وارتبطنا بجد 💘
+      </p>
+
+      <button onclick="nextPage('date19')">
+        ♥️ Next ♥️
+      </button>
+    </div>
+  </section>
+
+  <!-- 19-6-2026 -->
+  <section id="date19" class="page">
+    <div class="card">
+      <h1>19-6-2026 📅</h1>
+
+      <p class="big-text">
+        في اليوم ده قولتلك بحبك وارتبطنا بجد 💘
+      </p>
+
+      <button onclick="nextPage('date20')">
+        ♥️ Next ♥️
+      </button>
+    </div>
+  </section>
+
+  <!-- 20-9-2026 -->
+  <section id="date20" class="page">
+    <div class="card">
+
+      <h1>20-9-2026 📅</h1>
+
+      <div class="gallery">
+
+        <img src="images/IMG_20260922_235247_207.jpg">
+        <img src="images/IMG_20260922_235247_325.jpg">
+        <img src="images/IMG_20260922_235247_520.jpg">
+        <img src="images/IMG_20260922_235247_652.jpg">
+        <img src="images/IMG_20260922_235133_582.jpg">
+        <img src="images/IMG_20260922_235133_034.jpg">
+        <img src="images/IMG_20260922_235132_983.jpg">
+        <img src="images/IMG_20260922_235133_551.jpg">
+        <img src="images/IMG_20260922_235133_605.jpg">
+        <img src="images/IMG_20260922_235248_085.jpg">
+        <img src="images/IMG_20260922_235247_608.jpg">
+
+      </div>
+
+      <h1>💖 بحبك 💖</h1>
+
+      <button onclick="nextPage('final')">
+        ❤ Message ❤
+      </button>
+
+    </div>
+  </section>
+
+  <!-- الرسالة الأخيرة -->
+  <section id="final" class="page final-page">
+    <div class="final-message">
+
+      <h1>
+        💗 إيسو 💗
+      </h1>
+
+      <p>
+        «مهما قولتلك بحبك إزاي مش هوفيكي بحقك،
+        ده أنا بعشقك وبدمنك يا أم روسندا 💗❣»
+      </p>
+
+    </div>
+  </section>
+
+  <!-- مشغل الأغاني -->
+  <div class="music-player">
+
+    <div class="music-title">
+      🎵 نور عيني 🎵
+    </div>
+
+    <div class="music-controls">
+
+      <button onclick="previousSong()">⏮️</button>
+
+      <button onclick="toggleMusic()" id="playButton">
+        ▶️
+      </button>
+
+      <button onclick="nextSong()">⏭️</button>
+
+    </div>
+
+    <input
+      type="range"
+      id="volume"
+      min="0"
+      max="1"
+      step="0.01"
+      value="0.7"
+    >
+
+    <audio id="audio"></audio>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
